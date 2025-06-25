@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <!-- Favicon Icon -->
+    <link rel="icon" type="image/x-icon" href="/assets/brand-icon.svg">
+
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Links To All Style Files -->
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <img src="./assets/brand-logo.svg" alt="TravelLog Logo">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="destination.html">Destination</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="prices.html">Pricing</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <div id="login-container">
+                <a href="login.html" id="loginBtn"><i class="fa-solid fa-user" id="login-btn"></i></a>
+                <div style="display: none;">
+                    <a href='checkout.html'><i class="fa-solid fa-cart-shopping" style="margin-right:1rem"></i></a>
+                    <a href="/" id="logout-btn" class='btn-small' style='border-radius:50px;color:var(--white)'>Log Out</a>
+                </div>       
+            </div>
+            <div class="responsive-nav">
+                <i class="fa-solid fa-bars" style="color:var(--white-light)"></i>
+                <div class="responsive-nav-content">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="destination.html">Destination</a></li>
+                        <li><a href="feedback.html">Feedback</a></li>
+                        <li><a href="prices.html">Pricing</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                    <div id="login-container">
+                        <a href="login.html" id="loginBtn"><i class="fa-solid fa-user" id="login-btn"></i></a>
+                        <div style="display: none;">
+                        </div>       
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="container contact-section">
+            <h1>Contact <span>Us</span></h1>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn">Submit</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <section class="articles"></section>
+        <div class="container">
+            <h1>Get started and early <span>Update</span> about our package</h1>
+            <div class="searchbox">
+                <input type="text" placeholder="Enter your email">
+                <button class="btn" id="cta">Get Started</button>
+            </div>
+            <hr>
+            <div class="footer">
+                <img src="./assets/brand-logo.svg" alt="TravelLog Logo">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/">Destination</a></li>
+                    <li><a href="/">Feedback</a></li>
+                    <li><a href="/">Pricing</a></li>
+                </ul>
+                <p><i class="fa-regular fa-copyright"></i>TravelLog</p>
+            </div>
+            <div class="socials">
+                <div class="social">
+                    <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+                <div class="social">
+                    <a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+                <div class="social">
+                    <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+<script src="main.js"></script>
+<script>
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        displayMessage('Thank you for contacting us!', 'success');
+        // Reset the form
+        document.getElementById('contactForm').reset();
+    });
+</script>
